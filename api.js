@@ -14,7 +14,7 @@ app.use(cors());
 app.use(bodParser.urlencoded({extended:true}));
 app.use(bodParser.json())
 
-app.get('/health',(req,res) => {
+app.get('/',(req,res) => {
     res.send("Api is working")
 });
 
