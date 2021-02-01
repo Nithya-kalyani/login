@@ -22,7 +22,16 @@ app.post('/login',(req,res) => {
     console.log(req.body);
     db.collection('login').insert(req.body,(err,result) => {
         if(err) throw err;
-        res.send('posted')
+        res.send('logged in')
+    })
+})
+
+
+app.post('/register',(req,res) => {
+    console.log(req.body);
+    db.collection('register').insert(req.body,(err,result) => {
+        if(err) throw err;
+        res.send('registered')
     })
 })
 
